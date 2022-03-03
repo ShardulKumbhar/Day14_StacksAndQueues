@@ -5,7 +5,8 @@ package stackandqueues;
 				 * ====================================
 				 * 1.creating a queue to store 5 elements in stack
 				 * 2. construtor to take data in stack
-				 * 3.method to print the stack values
+				 * 3.creating a dequeue to remove value in stack
+				 * 4.method to print the stack values
 				 * ==================================
 				 */
 				public class Queue {
@@ -29,12 +30,22 @@ package stackandqueues;
 					}
 
 					/*
-					 * 3.method to print the stack values
+					 * 3.creating a dequeue to remove value in stack
+					 */
+					public int deQueue() {
+						int data = queue[front];
+						front = front + 1;
+						size = size - 1;
+						return data;
+					}
+
+					/*
+					 * 4.method to print the stack values
 					 */
 					public void Show() {
 						System.out.println("Elements ");
 						for (int i = 0; i < size; i++) {
-							System.out.print(queue[i] + "->");
+							System.out.print(queue[front + i] + "->");
 						}
 					}
 				}
